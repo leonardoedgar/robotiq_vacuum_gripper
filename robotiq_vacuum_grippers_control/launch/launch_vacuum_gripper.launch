@@ -1,0 +1,4 @@
+<launch>
+  <node name="gripper_node" pkg="robotiq_vacuum_grippers_control" type="RobotiqVacuumGrippersRtuNode.py" args="$(env VACUUM_GRIPPER_PORT)" output="screen"/>
+  <node name="gripper_controller" pkg="robotiq_vacuum_grippers_control" type="RobotiqVacuumGrippersSimpleController.py" output="screen"/>
+</launch>
