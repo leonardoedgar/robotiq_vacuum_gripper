@@ -144,7 +144,7 @@ def publisher():
     """Main loop which requests new commands and publish them on the RobotiqVacuumGrippersRobotOutput topic."""
     rospy.init_node('RobotiqVacuumGrippersSimpleController')
     
-    pub = rospy.Publisher('RobotiqVacuumGrippersRobotOutput', outputMsg.RobotiqVacuumGrippers_robot_output)
+    pub = rospy.Publisher('RobotiqVacuumGrippersRobotOutput', outputMsg.RobotiqVacuumGrippers_robot_output, queue_size=100)
 
     command = outputMsg.RobotiqVacuumGrippers_robot_output();
 
